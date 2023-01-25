@@ -1,0 +1,372 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    h1{
+        @apply font-bold text-xl;
+    }
+}
+
+.header-list-item{
+    @apply flex items-center gap-2.5 cursor-pointer;
+}
+.header-list-item.activated{
+    @apply border border-solid border-white p-2.5 rounded-[20px];
+}
+.featuredItem{
+    @apply relative text-white rounded-[10px] overflow-hidden h-60 bg-gray-600/60;
+}
+.featuredImg{
+    @apply w-full object-cover mix-blend-overlay;
+}
+.featuredTitles{
+    @apply absolute bottom-5 left-5;
+}
+.pList{
+    @apply w-full max-w-[1024px] flex justify-between gap-5;
+}
+
+.pListItem{
+    @apply rounded-[10px] overflow-hidden cursor-pointer flex-1;
+}
+.pListImg{
+    @apply object-cover h-[150px] object-cover;
+}
+.pListTitles>h1{
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.pListTitles>h2{
+    font-size: 14px;
+    font-weight: 100;
+}
+.fp{
+    @apply w-full max-w-[1024px] flex justify-between gap-5 relative;
+}
+.fpItem{
+    @apply flex-1 gap-2.5 flex-col;
+}
+.fpImg{
+    @apply w-full h-[250px] object-cover;
+}
+.fpName{
+    @apply font-bold;
+}
+.fpCity{
+    @apply font-light;
+}
+.fpPire{
+    @apply font-medium;
+}
+.fpRating>button{
+    @apply bg-primary text-white border-none p-[3px] font-bold; 
+}
+.fpRating{
+    @apply flex gap-2;
+}
+.fpRating span{
+    @apply font-bold;
+}
+
+.mail{
+    @apply w-full mt-[50px] bg-primary text-white flex flex-col items-center gap-[20px] p-[50px];
+}
+.mailInputContainer input{
+    @apply w-[300px] p-2.5 border-none mr-2.5 text-black rounded-md;
+}
+.mailInputContainer button{
+    @apply p-2.5 bg-[#0071c2] text-white font-medium border-none rounded-md cursor-pointer;
+}
+.footer{
+    @apply w-full text-xs;
+}
+.fLists{
+    @apply max-w-[1024px] m-auto flex justify-between mb-12 items-center;
+}
+.footer ul{
+    @apply list-none p-0;
+}
+
+.footer li{
+    @apply mb-2.5 text-[#003580] cursor-pointer
+}
+
+.listContainer{
+    @apply flex justify-center mt-5;
+}
+.listWrapper{
+    @apply w-full flex max-w-[1024px] gap-[20px];
+}
+.listSearch{
+    @apply flex-1 bg-[#febb02] p-2.5 rounded-[10px] sticky top-2.5 h-max;
+}
+.lsTitle{
+    @apply text-xl text-[#555] mb-2.5;
+}
+.lsItem{
+    @apply flex flex-col gap-[5px] mb-2.5;
+}
+.lsItem>label{
+    font-size: 12px;
+}
+.lsItem>input{
+    @apply h-[30px] border-none p-1.5;
+}
+.lsItem>span{
+    @apply h-[30px] p-2.5 bg-white flex items-center cursor-pointer;
+}
+.lsOptions{
+    padding: 10px;
+}
+.lsOptionItem{
+    @apply flex justify-between mb-[10px] text-[555px] text-xs;
+}
+.lsOptionInput{
+    width: 50px;
+}
+.listSearch>button{
+    @apply p-2.5 bg-[#0071c2] text-white border-none w-full font-medium cursor-pointer;
+}
+.listResult{
+    flex:3;
+}
+.searchItem{
+    @apply border border-solid border-gray-400 p-2.5 rounded-md flex justify-between gap-5 mb-5;
+}
+.siImg{
+    @apply w-[200px] h-[200px] object-cover cursor-pointer;
+}
+.siDesc{
+    @apply flex flex-col gap-2.5 flex-[2];
+}
+.siTitle{
+    @apply text-xs text-[#0071c2] cursor-pointer;
+}
+.siDistance{
+    font-size: 12px;
+}
+.siTaxiOp{
+    @apply text-xs bg-[#008009] text-white w-max p-1 rounded-md;
+}
+.siSubtitle{
+    @apply text-xs font-bold;
+}
+.siFeatures{
+    font-size: 12px;
+}
+.siCancelOp{
+    @apply text-xs text-[#008009] font-bold;
+}
+.siCancelOpSubtitle{
+    @apply text-xs text-[#008009];
+}
+.siDetails{
+    @apply flex-1 flex-col justify-between;
+}
+.siRating{
+    @apply flex justify-between;
+}
+.siRating>span{
+    font-weight: 500;
+}
+.siRating>button{
+    @apply bg-primary text-white p-[5px] font-bold border-none;
+}
+.siDetailsTexts{
+    @apply text-center flex flex-col gap-1.5;
+}
+.siPrice{
+    font-size: 24px;
+}
+.siTaxOp{
+    font-size: 12px;
+    color:gray;
+}
+.siCheckButton{
+    @apply bg-primary text-white font-bold py-2.5 px-1.5 border-none cursor-pointer rounded-[5px];
+}
+/* Hotel Page */
+.hotelContainer{
+    @apply flex flex-col items-center mt-5;
+}
+.hotelWrapper{
+    @apply w-full max-w-[1024px] flex flex-col gap-2.5 relative;
+}
+.bookNow{
+    @apply absolute top-2.5 right-0 border-none py-2.5 px-5 bg-primary text-white font-bold rounded-[5px] cursor-pointer;
+}
+.hotelTitle{
+    font-size: 24px;
+}
+.hotelAdress{
+    @apply text-xs flex items-center gap-2.5;
+}
+.hotelDistance{
+    color: #0071c2;
+    font-weight: 500;
+}
+.hotelPriceHighlight{
+    color:#008009;
+    font-weight:500;
+}
+
+.hotelImages{
+    @apply flex flex-wrap justify-between;
+}
+.hotelImgWrapper{
+    width: 33%;
+}
+.hotelImg{
+    @apply w-full object-cover cursor-pointer;
+}
+.hotelDetails{
+    @apply flex justify-between gap-5 mt-5;
+}
+.hotelDetailsTexts{
+    flex:3;
+}
+.hotelDesc{
+    @apply text-sm mt-5;
+}
+.hotelDetailsPrice{
+    @apply flex-1 bg-[#ebf3ff] p-5 flex flex-col gap-5;
+}
+.hotelDetailsPrice>span {
+    font-size: 14px;
+}
+.hotelDetailsPrice > h2{
+    font-weight: 300;
+}
+.hotelDetailsPrice > button{
+    @apply border-none py-2.5 px-5 bg-primary text-white font-bold cursor-pointer rounded-[5px];
+}
+.slider{
+    @apply sticky top-0 left-0 w-[100vw] h-[100vh] bg-black/60 z-20 flex items-center;
+}
+.sliderWrapper{
+    @apply w-full h-full flex justify-center items-center;
+}
+.sliderImg{
+    width: 80%;
+    height: 80vh;
+}
+.close{
+    @apply absolute top-5 right-5 text-3xl text-gray-400 cursor-pointer;
+}
+.arrow{
+    @apply m-5 text-5xl text-gray-400 cursor-pointer;
+}
+
+
+
+.login {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lInput{
+  height: 30px;
+  padding: 10px;
+}
+
+.lButton {
+  border: none;
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.lButton:disabled{
+  background-color: #0071c28c;
+  cursor: not-allowed;
+}
+.reserve {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.418);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rContainer {
+  background-color: white;
+  padding: 20px;
+  position: relative;
+}
+
+.rClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.rItem {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 20px;
+}
+
+.rInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.rTitle {
+  font-weight: 500;
+}
+
+.rDesc {
+  font-weight: 300;
+}
+
+.rMax {
+  font-size: 12px;
+}
+
+.rPrice {
+  font-weight: 500;
+}
+
+.rSelectRooms{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 8px;
+  color: gray;
+}
+
+.room{
+  display: flex;
+  flex-direction: column;
+}
+
+.rButton {
+  border: none;
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 20px;
+}
